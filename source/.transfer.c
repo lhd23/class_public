@@ -859,7 +859,7 @@ int transfer_get_l_list(
   /** - start from l = 2 and increase with logarithmic step */
 
   index_l = 0;
-  current_l = 1;
+  current_l = 2;
   increment = MAX((int)(current_l * (pow(ppr->l_logstep,ptr->angular_rescaling)-1.)),1);
 
   while (((current_l+increment) < l_max) &&
@@ -900,7 +900,7 @@ int transfer_get_l_list(
   class_alloc(ptr->l,ptr->l_size_max*sizeof(int),ptr->error_message);
 
   index_l = 0;
-  ptr->l[0] = 1;
+  ptr->l[0] = 2;
   increment = MAX((int)(ptr->l[0] * (pow(ppr->l_logstep,ptr->angular_rescaling)-1.)),1);
 
   while (((ptr->l[index_l]+increment) < l_max) &&

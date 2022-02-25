@@ -684,7 +684,7 @@ cdef class Class:
             if elem in spectra:
                 cl[elem] = np.zeros(lmax+1, dtype=np.double)
 
-        for ell from 1<=ell<lmax+1:
+        for ell from 2<=ell<lmax+1:
             if harmonic_cl_at_l(&self.hr, ell, dcl, cl_md, cl_md_ic) == _FAILURE_:
                 raise CosmoSevereError(self.hr.error_message)
             if 'dd' in spectra:

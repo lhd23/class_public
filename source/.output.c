@@ -529,7 +529,7 @@ int output_cl(
       by calling harmonic_cl_at_l() and distribute the results to
       relevant files */
 
-  for (l = 1; l <= phr->l_max_tot; l++) {
+  for (l = 2; l <= phr->l_max_tot; l++) {
 
     class_call(harmonic_cl_at_l(phr,(double)l,cl_tot,cl_md,cl_md_ic),
                phr->error_message,
@@ -1540,7 +1540,7 @@ int output_open_cl_file(
       fprintf(*clfile,"# %s (units: [microK]^2)\n",first_line);
     }
 
-    fprintf(*clfile,"# for l=1 to %d, i.e. number of multipoles equal to %d\n",lmax,lmax-1);
+    fprintf(*clfile,"# for l=2 to %d, i.e. number of multipoles equal to %d\n",lmax,lmax-1);
     fprintf(*clfile,"#\n");
 
     if (pop->output_format == class_format) {

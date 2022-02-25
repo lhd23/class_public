@@ -15,9 +15,7 @@ from classy import Class
 LambdaCDM = Class()
 # pass input parameters
 LambdaCDM.set({'omega_b':0.0223828,'omega_cdm':0.1201075,'h':0.67810,'A_s':2.100549e-09,'n_s':0.9660499,'tau_reio':0.05430842})
-LambdaCDM.set({'output':'tCl,pCl,lCl,mPk,nCl','lensing':'yes','P_k_max_1/Mpc':3.0,
-               'selection':'gaussian', 'selection_mean':0.5, 'selection_width':0.1})
-
+LambdaCDM.set({'output':'tCl,pCl,lCl,mPk','lensing':'yes','P_k_max_1/Mpc':3.0})
 # run class
 LambdaCDM.compute()
 
@@ -29,10 +27,6 @@ LambdaCDM.compute()
 cls = LambdaCDM.lensed_cl(2500)
 # To check the format of cls
 cls.keys()
-
-ncls = LambdaCDM.density_cl(200)
-#print(ncls['ell'])
-print(ncls['dd'][0])
 
 
 # In[ ]:

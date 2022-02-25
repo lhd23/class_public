@@ -66,7 +66,7 @@ int main(int argc, char **argv) {
 
   int index_mode=pt.index_md_scalars;
   int index_ic  =pt.index_ic_ad;
-  int index_type=tr.index_tt_nc_g1;
+  int index_type=tr.index_tt_t0;
 
   /* 2) here is an illustration of how to output the transfer
      functions at some (k,l)'s of your choice */
@@ -98,7 +98,7 @@ int main(int argc, char **argv) {
   double transfer;
   FILE * output;
 
-  output=fopen("output/nc_g1.trsf","w");
+  output=fopen("output/test.trsf","w");
 
   for (index_l=0; index_l<tr.l_size[index_mode]; index_l++) {
     for (index_q=0; index_q<tr.q_size; index_q++) {

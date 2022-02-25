@@ -77,8 +77,6 @@ transfer_neglect_late_source = 3000.
 halofit_k_per_decade = 3000.
 
 l_switch_limber = 40.
-l_switch_limber_for_nc_local_over_z = 10000
-l_switch_limber_for_nc_los_over_z = 2000
 accurate_lensing=1
 num_mu_minus_lmax = 1000.
 delta_l_max = 1000.
